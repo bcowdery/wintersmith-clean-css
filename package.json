@@ -1,7 +1,7 @@
 {
   "name": "wintersmith-clean-css",
-  "version": "0.0.0",
-  "description": "A Clean-CSS plugin for Wintersmith for minifying CSS files.",
+  "version": "1.0.0",
+  "description": "A Wintersmith Clean-CSS plugin for minifying CSS files.",
   "author": "Brian Cowdery <bcowdery@pointyspoon.com>",
   "license": "MIT",
   "repository": {
