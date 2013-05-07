@@ -31,3 +31,7 @@ Then add add to your <code>./node_modules/wintersmith-clean-css/</code> to your 
     ]
 }
 ```
+
+## License
+
+This software is provided free of charge under the [MIT License](http://opensource.org/licenses/MIT).
