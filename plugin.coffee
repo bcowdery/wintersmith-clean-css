@@ -21,8 +21,8 @@ module.exports = (wintersmith, callback) ->
           callback null, new Buffer(css)
         catch error
           callback error
-        else
-          callback null, new Buffer @_text
+      else
+        callback null, new Buffer @_text
                                                                                 
   CleanCssPlugin.fromFile = (filename, callback) ->
     fs.readFile filename.full, (error, buffer) ->
