@@ -13,7 +13,7 @@ module.exports = (wintersmith, callback) ->
     getFilename: ->
       @_filename.relative
 
-    render: (locals, contents, templates, callback) ->
+    getView: -> (env, locals, contents, templates, callback) ->
       if @_filename.relative.indexOf('.min.css') is -1
         try
           logger.verbose "CleanCss #{@_filename.relative}"
@@ -21,12 +21,9 @@ module.exports = (wintersmith, callback) ->
           callback null, new Buffer(css)
         catch error
           callback error
-      else
-        callback null, new Buffer @_text
-
-    getView: -> (env, locals, contents, templates, callback) ->
-        callback null, new Buffer(@_text)
-
+        else
+          callback null, new Buffer @_text
+                                                                                
   CleanCssPlugin.fromFile = (filename, callback) ->
     fs.readFile filename.full, (error, buffer) ->
       if error
