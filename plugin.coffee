@@ -24,6 +24,9 @@ module.exports = (wintersmith, callback) ->
       else
         callback null, new Buffer @_text
 
+    getView: -> (env, locals, contents, templates, callback) ->
+        callback null, new Buffer(@_text)
+
   CleanCssPlugin.fromFile = (filename, callback) ->
     fs.readFile filename.full, (error, buffer) ->
       if error
